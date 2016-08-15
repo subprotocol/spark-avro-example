@@ -1,0 +1,11 @@
+{
+    "namespace": "com.subprotocol.avro",
+    "type": "record",
+    "name": "MyAvroRecord",
+    "fields": [
+        {"name": "firstName", "type": "string"},
+        {"name": "lastName", "type": "string"},
+        {"name": "age", "type": "long", "default": 0},
+        {"name": "attributes", "type": {"type": "map", "values": "string"}, "default": {}}
+    ]
+}
