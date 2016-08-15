@@ -71,7 +71,7 @@ object SparkAvroExample {
     )
 
     // read Avro file into RDD
-    val rddFromFile = AvroUtil.read[MyAvroRecord](
+    val rddFromFile: RDD[MyAvroRecord] = AvroUtil.read[MyAvroRecord](
       path = "/tmp/data.avro",
       schema = MyAvroRecord.getClassSchema,
       sc = sc
